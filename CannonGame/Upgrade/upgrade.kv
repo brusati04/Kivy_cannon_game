@@ -1,0 +1,127 @@
+upgrade:
+
+<upgrade>:
+    name: 'upgrade_page'
+    AnchorLayout:
+        canvas:
+            Rectangle:
+                source: "assets/images/background_upgrade.jpg"
+                size: root.size
+                pos: root.pos
+                GridLayout:
+
+        GridLayout:
+            rows: 4
+            Label: 
+                text: "PERSONALIZE YOUR TANK"
+                size_hint: 0.3, 0.3
+                font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+                font_size: "45dp"
+                color: 1, 1, 1, 1
+
+
+            GridLayout:
+                size_hint: 1, 0.4
+                cols: 2
+                
+                GridLayout:
+                    cols: 3
+
+                    AnchorLayout:
+                        size_hint: 0.3, 1
+                        anchor_x: "right"
+                        anchor_y: "center"
+                        Image:
+                            source: "assets\\images\\menu\\precedent.png"
+                            size_hint: 0.2, 0.2  
+                        Button: 
+                            background_color: 0,0,0,0
+                            size_hint: 0.2, 0.2  
+                            on_press: root.change_path_left_tank()
+
+                    AnchorLayout:
+                        size_hint: 0.4, 1
+                        anchor_x: "center"
+                        anchor_y: "center"
+                        Image:
+                            source: root.my_path_tank
+                            size_hint: 0.8, 0.8    
+
+                    AnchorLayout:
+                        size_hint: 0.3, 1
+                        anchor_x: "left"
+                        anchor_y: "center"
+                        Image:
+                            source: "assets\\images\\menu\\next.png"
+                            size_hint: 0.2, 0.2     
+                        Button: 
+                            background_color: 0,0,0,0
+                            size_hint: 0.2, 0.2  
+                            on_press: root.change_path_tank()
+
+                GridLayout:
+                    cols: 3
+
+                    AnchorLayout:
+                        size_hint: 0.3, 1
+                        anchor_x: "right"
+                        anchor_y: "center"
+                        Image:
+                            source: "assets\\images\\menu\\precedent.png"
+                            size_hint: 0.2, 0.2  
+                        Button: 
+                            background_color: 0,0,0,0
+                            size_hint: 0.2, 0.2  
+                            on_press: root.change_path_left()
+
+                    AnchorLayout:
+                        size_hint: 0.4, 1
+                        anchor_x: "center"
+                        anchor_y: "center"
+                        Image:
+                            source: root.my_path
+                            size_hint: 0.8, 0.8    
+
+                    AnchorLayout:
+                        size_hint: 0.3, 1
+                        anchor_x: "left"
+                        anchor_y: "center"
+                        Image:
+                            source: "assets\\images\\menu\\next.png"
+                            size_hint: 0.2, 0.2     
+                        Button: 
+                            background_color: 0,0,0,0
+                            size_hint: 0.2, 0.2  
+                            on_press: root.change_path()
+
+            
+            AnchorLayout:
+                size_hint: 1, 0.2
+                    
+                Button:
+                    text: "Select"
+                    size_hint: 0.2, 0.6
+                    background_color: 0, 0, 0, 0.5
+                    anchor_x: "right"
+                    anchor_y: "bottom"
+
+                    on_release:
+                        root.set_model()
+                        root.manager.goto_screen("levels_page")
+
+                     
+            AnchorLayout:
+                size_hint: 1, 0.1
+                GridLayout:
+                    cols: 2
+
+                    AnchorLayout:
+                        Button:
+                            text: "Back"
+                            size_hint: 0.2, 0.6
+                            background_color: 0, 0, 0, 0.5
+                            anchor_x: "left"
+                            anchor_y: "bottom"
+
+                            on_release: 
+                                root.manager.goto_screen("home_page")

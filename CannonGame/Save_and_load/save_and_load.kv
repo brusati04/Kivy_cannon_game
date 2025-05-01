@@ -1,0 +1,54 @@
+<save_and_load>:
+    name: "save_and_load_page"
+    FloatLayout:
+        canvas:
+            Rectangle:
+                source: "assets/images/tank_soldier.jpg"
+                size: root.size
+                pos: root.pos
+
+
+        Button:
+            text: "Back"
+            font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+            font_size: "20 dp"
+            background_color: 0, 0, 0, 0
+            size_hint: 0.1, 0.1
+            pos_hint: {"x": 0, "y": 0}
+            on_release: 
+                root.manager.goto_screen("home_page")
+
+        Label:
+            text: "Start New Game \n or Load Game"
+            font_name: "assets/fonts/Bleeding_Cowboys.ttf"
+            font_size: "60dp"
+            size_hint: 0.2,0.05
+            pos_hint: {"x": 0.4 , "y": 0.7 }
+            color: 0,0,0,1
+            ouline_color: 0,0,0,1
+        
+        TextInput:
+            id: player_name
+            size_hint: 0.2,0.05           
+            pos_hint: {"x": 0.4 , "y": 0.4 } 
+            hint_text: "Insert here your nickname: "
+            multiline: False
+            on_text_validate: root.on_text_validate(self)
+            color: 1,0,0,0.5
+
+        Label:
+            text: "Your name is: " + root.text_input_str
+            font_name: "assets/fonts/Top Secret.ttf"
+            font_size: "25 dp"
+            color: 0.5,0,0.13,1
+            bold: True
+        
+        Button:
+            text: "SUBMIT"
+            font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+            size_hint: 0.2,0.05
+            pos_hint: {"x": 0.4 , "y": 0.3 }
+            background_color: 1,0,0,1
+            on_release: 
+                root.on_submit()
+                root.manager.goto_screen("upgrade_page")

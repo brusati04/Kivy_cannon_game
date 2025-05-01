@@ -1,0 +1,68 @@
+<home>: 
+    name: "home_page"
+    GridLayout:
+        canvas:
+            Rectangle:
+                source: "assets/images/background.jpg"
+                size: root.size
+                pos: root.pos
+        cols: 1
+        rows: 2
+
+        Label:
+            text: "CANNON GAME"
+            font_name: "assets/fonts/GODOFWAR.TTF"
+            font_size: "80dp"
+            color: 0, 0, 0, 1
+
+            background_color: 1,1,1,0.5
+
+        
+        FloatLayout:
+            Button:
+                text: "PLAY"
+                font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+                font_size: "30 dp"
+                color: 1,1,1,1
+                background_color: 0,0,0,0.5
+                size_hint: 0.2,0.1
+                pos_hint: {"x": 0.4 , "y": 1 }
+                
+                on_release:
+                    root.manager.goto_screen("save_and_load_page")
+
+            Button:
+                text: "LEADERBOARD"
+                font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+                font_size: "30 dp"
+                color: 1,1,1,1
+                background_color: 0,0,0,0.5
+                size_hint: 0.2,0.1
+                pos_hint: {"x": 0.4 , "y": 0.8}
+                
+                on_release:
+                    root.manager.goto_screen("leaderboard_page")
+
+            Button:
+                text: "HELP"
+                font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+                font_size: "30 dp"
+                color: 1,1,1,1
+                background_color: 0,0,0,0.5
+                size_hint: 0.2,0.1
+                pos_hint: {"x": 0.4 , "y": 0.6 }
+                
+                on_release:
+                    root.manager.goto_screen("help_page")
+
+            Button:
+                text: "QUIT"
+                font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+                font_size: "30 dp"
+                color: 1,1,1,1
+                background_color: 0,0,0,0.5
+                size_hint: 0.2,0.1
+                pos_hint: {"x": 0.4 , "y": 0.4 }
+                
+                on_release:
+                    app.close()

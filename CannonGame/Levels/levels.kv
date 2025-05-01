@@ -1,0 +1,71 @@
+levels:
+
+<levels>: 
+    name: "levels_page"
+    AnchorLayout:
+        canvas:
+            Rectangle:
+                source: "assets/images/background.jpg"
+                size: root.size
+                pos: root.pos
+        GridLayout:
+            rows: 2
+            
+            ScrollView:
+                size_hint: 1, 0.8
+                
+                StackLayout:
+                    size_hint: 1, None
+                    height: self.minimum_height
+                    spacing: "20dp","20dp"
+                    
+                    Button:
+                        text: "LEVEL 1"
+                        size_hint: [None, None]
+                        size: ("300dp","300dp")
+                        background_color: 0, 0, 0, 0.5
+                        on_release:
+                            root.check_level(1)
+
+                    Button:
+                        text: "LEVEL 2"
+                        size_hint: [None, None]
+                        size: ("300dp","300dp")
+                        background_color: 0, 0, 0, 0.5
+                        on_release:
+                            root.check_level(2)
+
+                    Button:
+                        text: "LEVEL 3"
+                        size_hint: [None, None]
+                        size: ("300dp","300dp")
+                        background_color: 0, 0, 0, 0.5
+                        on_release:
+                            root.check_level(3)
+
+                    Button:
+                        text: "LEVEL 4"
+                        size_hint: [None, None]
+                        size: ("300dp","300dp")
+                        background_color: 0, 0, 0, 0.5
+                        on_release:
+                            root.check_level(4)
+
+                    Button:
+                        text: "LEVEL 5"
+                        size_hint: [None, None]
+                        size: ("300dp","300dp")
+                        background_color: 0, 0, 0, 0.5
+                        on_release:
+                            root.check_level(5)
+
+                
+            Button:
+                text: "Back"
+                font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+                font_size: "20 dp"
+                background_color: 0, 0, 0, 0
+                size_hint: 0.1, 0.1
+                pos_hint: {"x": 0, "y": 0}
+                on_release: 
+                    root.manager.goto_screen("home_page")

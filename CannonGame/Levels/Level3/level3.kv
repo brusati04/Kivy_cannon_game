@@ -1,0 +1,98 @@
+
+<level3>:
+    name: 'level3_page'
+
+<Level3_game>:
+    Background3:
+        size_hint: None, None
+        width: 1500
+        height: 1050
+
+    Terrain3:
+        id: terrain
+        size_hint: None, None
+        width: 1500
+        height: 150
+
+    Part_tank:
+        id: part_tank
+        size_hint: None, None
+        size: 100, 35  # Explicit size
+        pos: 150, 200  # Explicit position
+
+    Tank:
+        id: tank
+        size_hint: None, None
+        size: 150, 150
+        pos: 50, 100  # Explicit position
+
+    Label:
+        id: score_label
+        size_hint: None, None
+        font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+        font_size: "20 dp"       
+        size: self.texture_size
+        pos: 1220, 1000  # Posizionata in alto a destra
+        color: 1, 1, 1, 1  # Colore bianco del testo
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # Sfondo nero opaco
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    Label:
+        id: bullets_label
+        size_hint: None, None
+        font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+        font_size: "20 dp"
+        size: self.texture_size
+        pos: 1050, 1000  # Posizionata a sinistra della score label
+        color: 1, 1, 1, 1  # Colore bianco del testo
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # Sfondo nero opaco
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    Label:
+        id: current_bullet
+        size_hint: None, None
+        font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+        font_size: "20 dp"
+        size: self.texture_size
+        pos: 600, 1000  # Posizionata a sinistra della score label
+        color: 1, 1, 1, 1  # Colore bianco del testo
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # Sfondo nero opaco
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    Button:
+        text: "Back"
+        font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+        font_size: "20 dp"
+        color: 1,1,1,1
+        background_color: 0,0,0,0.5
+        size_hint: 0.2,0.1
+        pos: 0,0
+        on_press:
+            root.exit()
+        on_release: 
+            root.parent.manager.goto_screen("levels_page")
+
+    Button:
+        canvas:
+            Rectangle:
+                source: "assets\\images\\menu\\question.png"
+                size: self.size
+                pos: self.pos
+        size_hint: None, None
+        size: 70, 70
+        pos: 1400, 975
+        background_color: 0,0,0,0  #trasparente
+        on_press: 
+            root.show_popup('help')

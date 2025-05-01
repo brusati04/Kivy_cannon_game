@@ -1,0 +1,46 @@
+leaderboard:
+
+<leaderboard>:
+    name: 'leaderboard_page'
+    FloatLayout:
+        canvas:
+            Rectangle:
+                source: "assets/images/background_leaderboard.png"
+                size: root.size
+                pos: root.pos
+        
+        Label:
+            text: "LEADERBOARD"
+            font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+            font_size: "40 dp"
+            color: 1, 0.8, 0.2, 1
+            size_hint: None, None
+            size: self.texture_size
+            pos_hint: {"center_x": 0.5, "top": 0.95}
+
+        Button:
+            text: "Back"
+            font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+            font_size: "20 dp"
+            background_color: 0, 0, 0, 0
+            size_hint: 0.1, 0.1
+            pos_hint: {"x": 0, "y": 0}
+            on_release: 
+                root.manager.goto_screen("home_page")
+
+        # Centered ScrollView for the leaderboard
+        ScrollView:
+            size_hint: 0.8, 0.6
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+            
+            # BoxLayout to stack the leaderboard rows vertically
+            BoxLayout:
+                id: leaderboard_box
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 10
+                padding: [20, 20, 20, 20]
+                
+                # The BoxLayout will dynamically fill with GridLayout rows

@@ -1,0 +1,7 @@
+Here are the keys to press on the keyboard to play the game:
+"a" = rotate the fuselage to the left
+"d" = rotate the fuselage to the right
+"spacebar" = to fire projectiles, you can also choose the more suitable type:
+"i" = fire bullets
+"o" = fire bombshells
+"p" = fire lasers

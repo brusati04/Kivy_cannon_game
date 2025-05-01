@@ -1,0 +1,32 @@
+[
+    {
+        "nickname": "Player1",
+        "score": 2000,
+        "last_level": 6
+    },
+    {
+        "nickname": "Player2",
+        "score": 2100,
+        "last_level": 6
+    },
+    {
+        "nickname": "Player3",
+        "score": 2000,
+        "last_level": 6
+    },
+    {
+        "nickname": "Lorenzo",
+        "score": 2100,
+        "last_level": 6
+    },
+    {
+        "nickname": "",
+        "score": 2005,
+        "last_level": 6
+    },
+    {
+        "nickname": "Prova",
+        "score": 2105,
+        "last_level": 6
+    }
+]

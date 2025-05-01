@@ -1,0 +1,23 @@
+Soldier, listen up! The enemy has attacked your homeland, and it's up to *YOU* to take the fight to them. This isn't just any battle - this is war, and your survival depends on your training. So gear up and get ready for the toughest challenge of your life!
+
+Your mission begins with a training exercise: this will prepare you for the battlefield, and make sure you don't get taken out in the first five minutes. Use this time wisely, soldier. Learn your weapons, master your movements, and be ready for anything.
+
+Here's your arsenal:
+
+- **Bullet**: Your standard round, reliable and effective.  
+- **Bombshell**: When this explodes, it releases a radial burst of bullets-take out multiple targets at once!  
+- **Laser**: Reflects off mirrors. Use your surroundings to your advantage and take down enemies with precision!
+
+Weapon Activation:
+- Press "i" to fire the Bullet.
+- Press "o" to launch the Bombshell.
+- Press "p" to fire the Laser.
+
+You'll also need to move:
+- Rotate your fuselage with "a" and "d". Stay sharp, stay alive.
+
+Remember, soldier, the last level will determine your victory. Your **score** will be the mark of how much you've truly won in this war. Keep your head in the game, and won't let your guard down for a second.
+
+This is it, soldier. Good luck: you're going to need it.
+
+**Now go win this war!**

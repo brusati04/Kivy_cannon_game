@@ -1,0 +1,48 @@
+#: import Factory kivy.factory.Factory
+
+help:
+
+<help>:
+    name: 'help_page'
+
+    GridLayout:
+        canvas:
+            Rectangle:
+                source: "assets\\images\\help.png"
+                size: root.size
+                pos: root.pos
+        cols: 1
+        rows: 3
+
+        Label:
+            text: "HELPING YOU"
+            font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+            font_size: "60 dp"
+            color: 255, 255, 0, 1
+            size_hint: 1, 0.2
+        
+        ScrollView:
+            size_hint: 1, 0.7
+            Label:
+                id: text_help
+                height: self.minimum_height
+                text: ""
+                font_name: "assets/fonts/Unispace.ttf"
+                font_size: "20 dp"
+                size_hint_y: None
+                height: self.texture_size[1]
+                text_size: self.width, None
+                padding: 100, 100
+
+        Button:
+            text: "back"
+            font_name: "assets/fonts/medieval_victoriana/medieval.ttf"
+            font_size: "30 dp"
+
+            background_color: 0,0,0,0
+            size_hint: 0.1,0.1
+            on_release: 
+                root.manager.goto_screen("home_page") 
+
+
+
